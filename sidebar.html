@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridy Blog</title>
+
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <!-- swiper slider css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA==" crossorigin="anonymous" />
+
+    <!-- custom style.css file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <!-- Header -->
+       <header id="header" class="shadow bg-light">
+           <nav class="container navbar">
+               <a href="/index.html" class="nav-brand text-dark">
+                    KTM
+                </a>
+
+                <!-- toggle button -->
+                <button class="toggle-button">
+                    <span><i class="fas fa-bars"></i></span>
+                </button>
+
+                <!-- collapse on toggle button click -->
+                <div class="collapse">
+                    <ul class="navbar-nav">
+                        <a href="https://www.ktm.com/en-in.html" class="nav-link">Home</a>
+                        <a href="https://www.ktm.com/en-in/models.html" class="nav-link">Model</a>
+                        <a href="https://www.ktm.com/en-in/service.html" class="nav-link">Services</a>
+                        <a href="https://www.google.com/search?q=ktm+categories&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&biw=1536&bih=678&sxsrf=AE3TifMa1Nkz-04CmMpTr7CRgkr_Y5W7pg%3A1754225437084&ei=HVuPaLD2BMmJjuMPm5636QY&ved=0ahUKEwjw-KGA1-6OAxXJhGMGHRvPLW0Q4dUDCBA&uact=5&oq=ktm+categories&gs_lp=Egxnd3Mtd2l6LXNlcnAiDmt0bSBjYXRlZ29yaWVzMgYQABgWGB4yBhAAGBYYHjILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESOlTUMkCWKhLcAJ4AJABAJgBnwKgAdUdqgEGMC4yLjE0uAEDyAEA-AEBmAIPoAKyGMICChAAGLADGNYEGEfCAgoQIxiABBgnGIoFwgIKEAAYgAQYQxiKBcICBRAAGIAEwgIKEAAYgAQYFBiHAsICDRAAGIAEGLEDGBQYhwLCAggQABiABBixA8ICDRAAGIAEGLEDGEMYigXCAgsQABiABBiRAhiKBcICBxAAGIAEGArCAgoQABiABBixAxgNwgIHEAAYgAQYDcICBhAAGA0YHsICCBAAGAgYDRgemAMAiAYBkAYIkgcGMi4xLjEyoAeFZLIHBjAuMS4xMrgHrBjCBwQwLjE1yAcl&sclient=gws-wiz-serp" class="nav-link">Categories</a>
+                        <a href="https://www.google.com/search?q=ktm+about&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&sxsrf=AE3TifN0uDiGRxTwpVDcZV5Mgrc3M26IPg%3A1754225229470&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeioyp3OhN11EY0n5qfq-zEMNIp8LUgCyfMBh3p2QSOggsatznFh8KsGHOpPLfsyNlNDyzTt_AEe046g50_mnAj58ShPRdIcX1B5p8XQebe6rqZpqjiicpFvFE21ARa42pbmnNuqagUn5QI2Eg8EJheIbVT4FN33UTFTOqWZ-cCvlGEQrMQ&aep=1&ntc=1&sa=X&ved=2ahUKEwiul6Kd1u6OAxXwzjgGHZiDHBUQ2J8OegQICxAD&biw=1536&bih=678&dpr=1.25&mstk=AUtExfC-gTx0CCz5R6nCdSl0Sg1_8Etm-ibIa3VrXYt_A3aQRpkBweZpZrTls7f16313gvyd_-6Ds8lvErJ5Eq4Qr0bonfGdVgmp_eIdUr1jGK9KZA_6K2JN0yhQI77lOc_5CbKg7ALWEqJk8rsO5vzYPgcqhb7sSK-gLc-1H601T5js06lShoBCW5IBr7HJN-PDbBRkzmYHGfplNGY9tAxAH-H33KwgG6bB5y-atSpvPuRNtHCO9cnFWB4mmuamRo_h0Wvqr-4gHi0XVWsdR04INkzPjGVdZCNAH_5PEEGIuFtD2YceQEwdTPCzBuKQP-GahB3-25GV8Y3n_wTrcHS-A0AEnk_Id0bJ4g&csuir=1&mtid=UlqPaKjOFOe84-EPxJKzkQQ" class="nav-link">About</a>
+                        <a href="https://www.ktm.com/en-in/contact.html" class="nav-link">Contact</a>
+                    </ul>
+                </div>
+
+                  <!-- collapse on toggle button click -->
+                  <div class="collapse">
+                      <ul class="navbar-nav">
+                            <div class="search-box">
+                                <a href="https://www.google.com/" class="nav-link"><i class="fas fa-search"></i></a>
+                            </div>
+                            <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="nav-link"><i class="fab fa-dribbble"></i></a>
+                      </ul>
+                  </div>
+           </nav>
+       </header>
+    <!-- .Header -->
+
+    <!-- Main Site -->
+       <main id="site-main">
+
+            <!-- Post Content -->
+                <section class="container">
+                    <div class="layout-2 row">
+                        <div class="col-8">
+                            <article id="post">
+                                <!-- article heading -->
+                                <div class="headings text-center">
+                                    <div class="category">
+                                        <a href="#" class="nav-link">Model</a>
+                                    </div>
+        
+                                    <div class="title">
+                                        <h2 class="text-title text-dark display-1"></h2>
+                                    </div>
+                                    KTM 200 Duke
+                                    <div class="meta">
+                                        <a href="#" class="link display-2 text-secondary px-1">
+                                            <i class="fas fa- text-primary"></i> ₹ 2,07,299
+                                        </a>
+                                        <a href="#" class="link display-2 text-secondary px-1">
+                                            <i class="fas fa- text-primary"></i> 199.5 cc|35 kmpl|24.67 bhp|159 kg
+                                        </a>
+                                        <a href="#" class="link display-2 text-secondary px-1">
+                                            <i class="fas fa-price text-primary"></i> Avg. Ex-Showroom price
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!-- thumbnail  -->
+                                <div class="thumbnail mt-3">
+                                    <img src="./assets/img1.avif" class="thumbnail" alt="">
+                                </div>
+        
+                                <!-- content -->
+                                <div class="content text-dark display-2 secondary-title mt-3">
+                                    <p>KTM, originally known as Kraftfahrzeug Trunkenpolz Mattighofen, is an Austrian motorcycle, 
+                                        bicycle, and motorsports brand founded in 1934 by Hans Trunkenpolz.
+                                         The company later incorporated production of its own motorcycles, achieving success with the R100 in 1953. 
+                                         Throughout its history, KTM has been known for its off-road motorcycles (enduro, motocross, and supermoto) and has also
+                                          expanded into street motorcycle production, with models such as the Duke series and the RC supersport line. The company's racing prowess is significant,
+                                          boasting over 300 victories in national and international events, including numerous world championships and a long-standing dominance in the Dakar Rally from 2001 to 2019. 
+                                    </p>
+                                    <p>KTM experienced financial difficulties in the late 20th century, culminating in a takeover by creditors in 1991 and splitting into four divisions. However, the motorcycle division, KTM Sportmotorcycle GmbH, was acquired in 1992 and, under the guidance of Stefan Pierer, recovered and expanded its operations. The company has strategically pursued partnerships and acquisitions, including a significant alliance with Indian manufacturer Bajaj Auto and the acquisition of Husqvarna Motorcycles
+                                    </p>
+                                    <p>Today, KTM AG is the parent company of the KTM Group, which includes the brands KTM, Husqvarna Motorcycles, and GasGas Motorcycles. KTM remains a leading motorcycle manufacturer, particularly in Europe, and continues to be known for its high-performance motorcycles and commitment to innovation, even exploring electric models. The company faces ongoing financial challenges as highlighted in 2024 with significant debt, however, restructuring and continued participation in racing competitions like MotoGP demonstrate KTM's dedication to its legacy and future in the motorcycle world.
+                                    </p>
+                                </div>
+                            </article>
+        
+                            <!-- post footer -->
+                            <div class="post-footer mb-3">
+                                <div class="post-tags d-flex flex-wrap justify-content-center">
+                                    <a href="https://www.google.com/search?q=ktm+duke&sa=X&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&sxsrf=AE3TifOhQY_HQ5V1eK2TMAqw_skVcYRp1w%3A1754224593362&udm=50&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeioyp3OhN11EY0n5qfq-zENyQuF3_WaPI4Qgb6AZzy-etFjo9fqZ_m1LmwOk0Tw7NlugVBqJ2aYQkP3knYTQiMAm7VMYCShUYFAjfab01LRPu7T6r7JLyXh4g10wM4MIuhgmcw9MWBeBQodDsJvoIkm6a8gjQ8MCeXyHrPcd-p2hF-AVnA&aep=1&ntc=1&ved=2ahUKEwi9ofnt0-6OAxX1xzgGHaGRAEIQ2J8OegQIDBAD&biw=1536&bih=678&dpr=1.25&mtid=41ePaJu1C-eJ4-EPuszqGA&mstk=AUtExfB9vgVABa0utF5FDdSGgbFxyBsLHWbiSLN3ljSQWGzX_sLyp4KZ-xmXOcbY0RYGTSsSlojS-rFuQXembk95JEbziEP_0kCfXcZ0suIJDa1qBuSfRWf93jOAxK5LETYZiQ0g73ucSEKlganH9lIkoMDItpaxrmWP04xVSWSFi-soJOc_xrQOtlK7n6z9semkanQiUvumWHiDdKQnEL_6Qnl2exDR-FmHTgR0OQzhXzMQJVd3sIdXe5ffuoWtWaZUmq0OKZUGbFFWmzXZLrILzfRfoyglXusHHlr9siyGAEpQGfw30bZmj3lLjiL6jv_hapzUlldD4DRuZmW4PosASdRgXUrQR9zEEg&csuir=1" class="nav-link btn bg-light">Duke</a>
+                                    <a href="https://www.google.com/search?q=ktm+rc&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&sxsrf=AE3TifMIt6E3OqPsY11lK8oXAfbVXDYOAw%3A1754224684347&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeioyp3OhN11EY0n5qfq-zENyQuF3_WaPI4Qgb6AZzy-etFjo9fqZ_m1LmwOk0Tw7NlugVBqJ2aYQkP3knYTQiMAm7VMYCShUYFAjfab01LRPu7T6r7JLyXh4g10wM4MIuhgmcw9MWBeBQodDsJvoIkm6a8gjQ8MCeXyHrPcd-p2hF-AVnA&aep=1&ntc=1&sa=X&ved=2ahUKEwjuuKqZ1O6OAxWr3TgGHQ2zK-0Q2J8OegQICBAD&biw=1536&bih=678&dpr=1.25&mtid=LliPaLHCMLnx4-EPh8yUsQ8&mstk=AUtExfA1MUSonIrXk3HT_bhIwPoezK6UdI3CFWFIUX0rFwSUaBMLCX4FjJKNqccHoNENiPwfcc932pJn7KI-yr8xC-dUlwNkweHV0sg_WWLGM12ZLYFoQZuHSH_HjESWeuh3IBuzNyisjJ_AzV0lnGZhdaN7Xix95Q70e_WZMDrry2bzfi8czmtDMnHVN1QITLhWotkKWl7UqWaHdHDnvVIkEPfbK8JDi_20lxwg3VORC5rm-IR78bzW9JgffUt-fSPBS8U4rEAJjnhizg2z6OIAmB_YNDS4x9U4pygj0_UNMSYeExXNl8Ty2hxgRJx1n3w_WsewHYC92Dgv_DSuP9tkXqvpOR8PFSdtHg&csuir=1"  class="nav-link btn bg-light">RC</a>
+                                    <a href="https://www.google.com/search?q=ktm+adventure&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&sxsrf=AE3TifPM-y1NtdAl2ZP7WzFoLdwxOfRNuw%3A1754224729741&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIetBXe9Do9DAuamxeB-puw_YsNKwkQmpdBnXmV_Wcu-Aa6tSphtaa0Ii6-dV_VFDbcf1v3-70EZAkDaoB3vQZptN0cN-c7xhNEyaJkhMJQO00HEF6uqOnd-KL02w62f-A9tMv1p-UOxXUAlaHKK6Ntqg4Oz7C6mPERUQ3wCTfuPtJJ-stvA&aep=1&ntc=1&sa=X&ved=2ahUKEwj8i_2u1O6OAxUpxjgGHcvHDkkQ2J8OegQIDRAD&biw=1536&bih=678&dpr=1.25&mstk=AUtExfAC4KW7LaomvZS72bao4FBJ25IGkOivOioAn3l5hIcK___kxRaZlc3cwQc8EUGOUF4_CxKNa9ItRoEOF2fcImJ9euS_q0SmDVuQtMFwR6UZhGs-rpIamB9j-Uym9OvvnkZfeTE-fm93p7ULbIyIRuwsQWIHvoeq_hoEUloLqOKoaniPrzqRDrF05LIHt4hgRNfBKbGfqY7njBYMs8hPMu_z2ckYkQhidKtVYYMYmE5jNynPbujOAICGG9MZt3P3sWL4GAN-jp2v4ur-YpJrKkJYUun2uCI1Ps_o1wMgqATvsmkaCs8iE-UBIFI8YDSo2w2EQ7BuY80fVcmT_cs8J8K2_NTgU3WuvA&csuir=1&mtid=W1iPaMfpJOGZ4-EPn-Gq2Q4" class="nav-link btn bg-light">Adventure</a>
+                                    <a href="https://www.google.com/search?q=ktm+enduro&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&sxsrf=AE3TifOsUqlns_kKtrfpuDdDuacFAd55xw%3A1754224764892&udm=50&fbs=AIIjpHwdlVWI4oi2g38E8_BbusNmV4N_PDMDZa8kD6jzfAqHH_e2wpq3bNF0nim2pM6iwiK5Oss9ItVPKnx1IZlun2ErTHP0YiOP3Vy8s4OVJxII_rLXZlhPkdBFH5Nx2QnBS91jgMJx0n1saMSRJ4YT44P2ioGtD0z1MeHY8yHnppRI3uQpnkIRHvOUo5unA4v153Sb1C3saiRR_KRe9sjNk8YVeMcLu9N7jlqdwEggz1mHt5R9LPE&aep=1&ntc=1&sa=X&ved=2ahUKEwjKzd6_1O6OAxVryDgGHc9YCygQ2J8OegQICBAD&biw=1536&bih=678&dpr=1.25&mstk=AUtExfDD2Xf2_GhkwCankbbirc6MXas1zlRXaKKivC7uYCSL6uKOdKSchUmOiZ78D9ZElhFCEvDRreiKpC-Pw0xTrC2bnKCsYdxp853WKHxTOiYlUrDoTAhN87ZnyoutM7gtHJor7YHF_MR0Fv62OMK6q7A2FtrzFPff_GJxD_FSEMkPBbpBgqAHPxYFskXbU0tuM5qsGOW297UpGaGFsC-PmGTKipGQBI9BttYdBkW4OC_oWo6Nq6o5HW4rXWPxpjTEfm4RoMadqD4TqglcHIFt0IEeUDu51sLjyhTRyCSGgFPvKDrTZz5JzsP_4WE74yCDWlaOg0-jbLSBNnh2w7AEcFeKtJtv3sGSQA&csuir=1&mtid=fliPaOTJNpOY4-EPgLyC4AQ" class="nav-link btn bg-light">Enduro</a>
+                                    <a href="https://www.google.com/search?q=ktm+x+bow&sa=X&sca_esv=1c28c6d12b6f9275&rlz=1C1CHBF_enIN1148IN1149&sxsrf=AE3TifM8RzpAgwAySxOHMNWrcuRs-PXIXA%3A1754224800208&udm=50&fbs=AIIjpHz30rPMyW-0vSP0k1VTNmO_kCOARpjPjQRkBWH2HwUIz5XUSIJvSK0oms7XOxizDlnr_4ZY5sR6MhoHu3TFlth2rG29N-ZS27Ewg3pWkHJuKnhNmmrfF6bzjXx0gOJYfAyOcI_ne0jJ4k81yz9EdjkRMD_Siw9VM6aGUi4XEXISK6-SwPK8mFDPc1hIIqQGdN98eKE_5jilQbZSAMRfnLCMH9jyg5nqOhTTodzB4278JiizAhk&aep=1&ntc=1&ved=2ahUKEwjVg8rQ1O6OAxUr6TgGHc-SFzAQ2J8OegQICBAD&mstk=AUtExfDo77gbXsCcH99joC72sjJ0u-wJwtINgZIE6aE_WbXqyHbADC0pGtFoNtxsGU4ick5kzPQ80YNEu0NPWhOYXs0IZuCqvDBxZgXjwoSpgwtjXFecOTNv4hSFn-Hmb8HZBIjC_HxifdRb5L4d2tUkDtmNaRFCbex43wIDu0A-p4RIz4AoBhJoFr_4LI8pH0RAtpLRkYmAPK0qwV4dgO06AHbEXRF8CCy9kMtPK8FnVPdIGK7uREFm_s8DXyEIXrT8_rKDT1SKcKtbuD0aGR30kLByjvHVFV0JSXTtGORNmhelvhQGfmIt6HCGyk-dhljitgWuLU_eyP5zacVTTsVDquCJLqKFqGkK5g&csuir=1&biw=1536&bih=678&dpr=1.25&mtid=mFiPaJa1DNq04-EPtbOokAM" class="nav-link btn bg-light">X-Bow</a>
+                                </div>
+        
+                                <div class="post-author text-center">
+                                    <div class="author-avatar">
+                                        <img src="./assets/face/face1.png" class="rounded" alt="">
+                                    </div>
+        
+                                    <div class="author-info py-2">
+                                        <h3 class="text-dark">KTM</h3>
+        
+                                        <p class="text-secondary secondary-title">
+                                           KTM is an Austrian motorcycle, bicycle, and motorsports brand known for its high-performance, 
+                                           off-road (enduro, motocross, and supermoto) and expanding street bike segments. 
+                                        </p>
+        
+                                        <div class="post-tags d-flex flex-wrap justify-content-center">
+                                            <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                                            <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                                            <a href="#" class="nav-link"><i class="fab fa-dribbble"></i></a>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                                <!-- post related -->
+                                <div class="post-realted py-2">
+                                    <div class="row justify-content-center">
+                                        <div class="prev">
+                                            <div class="py-2">
+                                                <a href="#" class="display-2 text-dark">
+                                                    <i class="fas fa-chevron-left"></i> 
+                                                    Previous Post
+                                                </a>
+                                            </div>
+                                            <article class="article text-center">
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <img src="./assets/img1.avif" class="object-fit" alt="">
+                                                    </a>
+                                                    <div class="cart-body px-1">
+                                                        <div class="category">
+                                                            <a href="#" class="link text-primary text-secondary">Fashion</a>
+                                                        </div>
+                                                        <a href="#" class="text-title display-1 text-dark">
+                                                            Looking for some feedback for this rejected track
+                                                            technology
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="next text-right">
+                                            <div class="py-2">
+                                                <a href="#" class="display-2 text-dark">
+                                                    Next Post 
+                                                    <i class="fas fa-chevron-right"></i> 
+                                                </a>
+                                            </div>
+                                            <article class="article text-center">
+                                                <div class="d-flex">
+                                                    <a href="#">
+                                                        <img src="./assets/img2.avif" class="object-fit" alt="">
+                                                    </a>
+                                                    <div class="cart-body px-1">
+                                                        <div class="category">
+                                                            <a href="#" class="link text-primary text-secondary">Fashion</a>
+                                                        </div>
+                                                        <a href="#" class="text-title display-1 text-dark">
+                                                            Looking for some feedback for this rejected track
+                                                            technology
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- comments -->
+                                <div class="post-comments py-2">
+                                    <h3 class="text-center display-1 secondary-title py-2"> Comments</h3>
+        
+                                    <div class="comment-details">
+                                        <div class="comment-item py-2">
+                                            <div class="d-flex">
+                                                <div class="avatar px-2">
+                                                    <img src="./assets/face/face1.png" class="rounded" alt="">
+                                                </div>
+                                                <div class="comment-content">
+                                                    <h5 class="display-2 m-0">Performance Focus</h5>
+                                                    <p class="title-secondary text-dark">
+                                                        KTMs are often praised for their powerful engines and sporty handling, making them enjoyable for riders who prioritize performance and a thrilling riding experience. The sharp handling and lightweight design contribute to their agility, especially in city traffic and on winding roads. 
+                                                    </p>
+                                                </div>
+                                            </div>
+        
+                                            <!-- comment reply -->
+                                            <div class="reply py-2">
+                                                <div class="d-flex">
+                                                    <div class="avatar px-2">
+                                                        <img src="./assets/face/face2.png" class="rounded" alt="">
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        <h5 class="display-2 m-0">Potential Reliability Concerns</h5>
+                                                        <p class="title-secondary text-dark">
+                                                            While powerful, some users have reported reliability issues, particularly with certain models and components. These concerns include issues with electronics, mixing of engine oil and coolant, and the need for more frequent maintenance. 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="comment-item py-2">
+                                            <div class="d-flex">
+                                                <div class="avatar px-2">
+                                                    <img src="./assets/face/face3.jpeg" class="rounded" alt="">
+                                                </div>
+                                                <div class="comment-content">
+                                                    <h5 class="display-2 m-0">Pricing and Value</h5>
+                                                    <p class="title-secondary text-dark">
+                                                        KTM has seen price increases over the years, but some reviews suggest the bikes still offer good value considering the features and performance they provide. The higher price point is often attributed to the advanced technology and sporty nature of the motorcycles. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                    
+                                    <!-- comment form -->
+                                    <div class="comment-form">
+        
+                                        <h3 class="text-center display-1 secondary-title py-2">Leave Comment</h3>
+        
+                                        <div class="d-flex justify-content-between flex-wrap">
+                                            <input type="text" class="form-control" placeholder="Name">
+                                            <input type="email" class="form-control" placeholder="Email">
+                                            <input type="text" class="form-control" placeholder="Website">
+                                        </div>
+        
+                                        <textarea class="form-control mt-3" placeholder="Message" rows="10"></textarea>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary display-2 text-light mt-2">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                            <!-- .post footer -->
+                        </div>
+                        <div class="col-4">
+                            <aside id="sidebar" class="px-1">
+
+                                <!-- categories -->
+                                <section class="categories">
+                                    <h2 class="text-center text-dark">Categories</h2>
+
+                                    <a href="#" class="d-flex justify-content-between text-dark">
+                                        <span>Design</span>
+                                        <span>5</span>
+                                    </a>
+                                    <a href="#" class="d-flex justify-content-between text-dark">
+                                        <span>Graphic</span>
+                                        <span>8</span>
+                                    </a>
+                                    <a href="#" class="d-flex justify-content-between text-dark">
+                                        <span>Illistration</span>
+                                        <span>3</span>
+                                    </a>
+                                    <a href="#" class="d-flex justify-content-between text-dark">
+                                        <span>Fashion</span>
+                                        <span>2</span>
+                                    </a>
+                                </section>
+
+                                <!-- Trending post -->
+                                <section class="trending-post mt-3">
+
+                                    <h2 class="text-center text-dark py-2">Trending Post</h2>
+
+                                    <!-- post-items -->
+                                    <div class="post-item py-1">
+                                        <article class="article">
+                                            <div class="d-flex">
+                                                <a href="#">
+                                                    <img src="./assets/img1.jpg" class="rounded px-1" alt="">
+                                                </a>
+                                                <div class="cart-body">
+                                                    <div class="trending-category">
+                                                        <a href="#" class="link text-primary">
+                                                            Fashion
+                                                        </a>
+                                                    </div>
+                                                    <a href="#" class="text-title display-2 text-dark">
+                                                        Looking for some feedback for this rejected track technology
+                                                    </a>
+                                                    <p class="secondary-title text-secondary display-3">
+                                                        <span>
+                                                            <i class="far fa-clock text-primary"></i>
+                                                             Clock Wed 02, 2019
+                                                        </span>
+                                                    </p>                                                    
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                       <!-- post-items -->
+                                       <div class="post-item py-1">
+                                        <article class="article">
+                                            <div class="d-flex">
+                                                <a href="#">
+                                                    <img src="./assets/img2.jpg" class="rounded px-1" alt="">
+                                                </a>
+                                                <div class="cart-body">
+                                                    <div class="trending-category">
+                                                        <a href="#" class="link text-primary">
+                                                            Fashion
+                                                        </a>
+                                                    </div>
+                                                    <a href="#" class="text-title display-2 text-dark">
+                                                        Looking for some feedback for this rejected track technology
+                                                    </a>
+                                                    <p class="secondary-title text-secondary display-3">
+                                                        <span>
+                                                            <i class="far fa-clock text-primary"></i>
+                                                             Clock Wed 02, 2019
+                                                        </span>
+                                                    </p>                                                    
+                                                </div>
+                                            </div>
+                                        </article>
+                                        </div>
+
+                                           <!-- post-items -->
+                                    <div class="post-item py-1">
+                                        <article class="article">
+                                            <div class="d-flex">
+                                                <a href="#">
+                                                    <img src="./assets/img3.jpg" class="rounded px-1" alt="">
+                                                </a>
+                                                <div class="cart-body">
+                                                    <div class="trending-category">
+                                                        <a href="#" class="link text-primary">
+                                                            Fashion
+                                                        </a>
+                                                    </div>
+                                                    <a href="#" class="text-title display-2 text-dark">
+                                                        Looking for some feedback for this rejected track technology
+                                                    </a>
+                                                    <p class="secondary-title text-secondary display-3">
+                                                        <span>
+                                                            <i class="far fa-clock text-primary"></i>
+                                                             Clock Wed 02, 2019
+                                                        </span>
+                                                    </p>                                                    
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                       <!-- post-items -->
+                                       <div class="post-item py-1">
+                                        <article class="article">
+                                            <div class="d-flex">
+                                                <a href="#">
+                                                    <img src="./assets/img4.jpg" class="rounded px-1" alt="">
+                                                </a>
+                                                <div class="cart-body">
+                                                    <div class="trending-category">
+                                                        <a href="#" class="link text-primary">
+                                                            Fashion
+                                                        </a>
+                                                    </div>
+                                                    <a href="#" class="text-title display-2 text-dark">
+                                                        Looking for some feedback for this rejected track technology
+                                                    </a>
+                                                    <p class="secondary-title text-secondary display-3">
+                                                        <span>
+                                                            <i class="far fa-clock text-primary"></i>
+                                                             Clock Wed 02, 2019
+                                                        </span>
+                                                    </p>                                                    
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </section>
+
+                            </aside>
+                        </div>
+                    </div>
+
+
+                </section>
+            <!-- .Post Content -->
+
+            <!-- Swiper slider -->
+                <section class="slider">
+                    <div class="container">
+
+                        <!-- Slider main container -->
+                            <div class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./assets/slider/img2.jpeg" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                     <!-- Slides -->
+                                      <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./assets/slider/img3.jpeg" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                     <!-- Slides -->
+                                      <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./assets/slider/img4.jpeg" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                        <!-- Slides -->
+                                             <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./assets/slider/img5.jpeg" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="./assets/slider/img6.jpeg" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                            <!-- Slides -->
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="./assets/slider/img7.jpeg" class="img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/slider/img8.jpeg" class="img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                                    <!-- Slides -->
+
+                                </div>
+                            </div>
+
+                    </div>
+                </section>
+             <!-- .Swiper slider -->
+
+       </main>
+    <!-- .Main Site -->
+
+    <!-- footer -->
+       <footer id="footer">
+           <div class="container">
+               <div class="row mb-3">
+                   <div class="col-3">
+                       <h2 class="footer-title secondary-title">About Us</h2>
+
+                       <div class="secondary-title text-secondary">
+                            <p class="mt-2 ">
+                               For KTM contact us
+                            </p>
+                            
+                            <address>
+                                <i class="fas fa-map-marker-alt text-primary"></i> 
+                                coimbatore
+                            </address>
+
+                            <div class="phone">
+                                <i class="fas fa-mobile text-primary"></i> 
+                                9361466782
+                            </div>
+
+                            <div class="email">
+                                <i class="fas fa-envelope text-primary"></i> 
+                               KTM2025@gmail.com
+                            </div>
+
+                       </div>
+                   </div>
+                   <div class="col-3">
+                       <h2 class="footer-title secondary-title">Feature Post</h2>
+
+                       <div class="feature-post">
+                           <div class="flex-item">
+                               <article class="article">
+                                   <div class="d-flex">
+                                       <a href="#">
+                                           <img src="./assets/img9.jpg" class="object-fit px-1" alt="">
+                                           <div class="px-1">
+                                               <a href="#" class="text-title display-2 text-dark">
+                                                Looking for some feedback for this rejected track
+                                                technology
+                                               </a>
+                                               <p class="secondary-title text-secondary display-3">
+                                                    <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021 </span>
+                                               </p>
+                                           </div>
+                                       </a>
+                                   </div>
+                               </article>
+                           </div>
+                           <div class="flex-item">
+                            <article class="article">
+                                <div class="d-flex">
+                                    <a href="#">
+                                        <img src="./assets/img1.jpg" class="object-fit px-1" alt="">
+                                        <div class="px-1">
+                                            <a href="#" class="text-title display-2 text-dark">
+                                             Looking for some feedback for this rejected track
+                                             technology
+                                            </a>
+                                            <p class="secondary-title text-secondary display-3">
+                                                 <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021 </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                             </div>
+                             <div class="flex-item">
+                                <article class="article">
+                                    <div class="d-flex">
+                                        <a href="#">
+                                            <img src="./assets/img2.jpg" class="object-fit px-1" alt="">
+                                            <div class="px-1">
+                                                <a href="#" class="text-title display-2 text-dark">
+                                                 Looking for some feedback for this rejected track
+                                                 technology
+                                                </a>
+                                                <p class="secondary-title text-secondary display-3">
+                                                     <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021 </span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                       </div>
+                   </div>
+                   <div class="col-3">
+                        <h2 class="footer-title secondary-title">Tags</h2>
+
+                        <div class="tags">
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="nav-link btn bg-light">Travel</a>
+                                <a href="#" class="nav-link btn bg-light">Food</a>
+                                <a href="#" class="nav-link btn bg-light">Lifestyle</a>
+                                <a href="#" class="nav-link btn bg-light">Techonogy</a>
+                                <a href="#" class="nav-link btn bg-light">Fashion</a>
+                            </div>
+                        </div>
+
+                        <h2 class="footer-title secondary-title mt-2">Social</h2>
+
+                        <div class="tags social">
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="nav-link btn bg-light"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="nav-link btn bg-light"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="nav-link btn bg-light"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="nav-link btn bg-light"><i class="fab fa-dribbble"></i></a>
+                            </div>
+                        </div>
+
+                   </div>
+               </div>
+
+               <!-- copyrights  -->
+               <div class="copyrights">
+                   <p class="text-center text-secondary display-2">
+                        © 2025 <a href="#" class="text-primary">KTM</a> https://www.ktm.com/en-in.html
+                   </p>
+               </div>
+           </div>
+       </footer>
+    <!-- .footer -->
+
+
+    <!-- masonry libray for horizontal grid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+
+    <!-- swiper slider cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js" integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA==" crossorigin="anonymous"></script>
+
+    <!-- custom javascript main.js file -->
+    <script src="main.js"></script>
+</body>
+</html>
